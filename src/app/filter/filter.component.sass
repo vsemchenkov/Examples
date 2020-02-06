@@ -1,0 +1,38 @@
+.grid
+  display: grid
+
+.w300
+  width: 300px !important
+
+.label_err
+  display: none
+
+.label_group > input[name='name']
+  &:valid:focus
+    border-bottom: 1px solid green
+.label_group > input[name='name']
+  &:invalid:focus
+    border-bottom: 1px solid red
+.label_group > input[name='type']
+  &:valid:focus
+    border-bottom: 1px solid green
+.label_group > input[name='type']
+  &:invalid:focus
+    border-bottom: 1px solid red
+
+.label_group > input[name='name']
+  &:valid:focus + .label_err
+    display: none
+
+.label_group > input[name='name']
+  &:invalid:focus + .label_err
+    display: block
+
+.label_group > input[name='type']
+  &:valid:focus + .label_err
+    display: none
+
+.label_group > input[name='type']
+  &:invalid:focus + .label_err
+    display: block
+

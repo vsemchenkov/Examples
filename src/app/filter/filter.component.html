@@ -1,0 +1,17 @@
+<div class="container l6 grid w300">
+  <form (ngSubmit)="getForm(Form)" #Form="ngForm">
+    <div class="label_group">
+      <label for="name">Name</label>
+      <input class="name" type="text" minlength="1" maxlength="255" name="name" ngModel="" #Name required>
+      <div class="label_err">Заполните поле</div>
+    </div>
+    <div class="label_group">
+      <label for="type">Type</label>
+      <input class="type" type="text" minlength="1" maxlength="255" name="type" ngModel="" #Type required>
+      <div class="label_err">Заполните поле</div>
+    </div>
+    <button [disabled]="Name.value == '' || Type.value == ''"  type="submit" class="btn">Искать</button>
+  </form>
+
+  {{ Valid }}
+</div>
